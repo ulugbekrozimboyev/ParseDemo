@@ -91,31 +91,33 @@ class LoginViewController: UIViewController {
             
             let json: Any?
             
-            do
-            {
+            do {
                 json = try JSONSerialization.jsonObject(with: data!, options: [])
-            }
-            catch
-            {
+            } catch {
                 return
             }
             
-            guard let server_response = json as? NSDictionary else
-            {
+            guard let server_response = json as? NSDictionary else {
                 return
             }
             
             
-            if let data_block = server_response["data"] as? NSDictionary
-            {
-                if let session_data = data_block["session"] as? String
-                {
+            if let data_block = server_response["data"] as? NSDictionary {
+                
+                if let session_data = data_block["session"] as? String {
+                
                     self.login_session = session_data
                     
                     let preferences = UserDefaults.standard
                     preferences.set(session_data, forKey: "session")
                     
                     DispatchQueue.main.async(execute: self.LoginDone)
+                    
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    
+                    let homeViewController = storyBoard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+                    self.present(homeViewController, animated:true, completion:nil)
+                    
                 }
             }
             
