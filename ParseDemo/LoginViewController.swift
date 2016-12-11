@@ -18,6 +18,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBAction func DoLogin(_ sender: Any) {
+        
+        if(loginButton.titleLabel?.text == "Logout")
+        {
+            let preferences = UserDefaults.standard
+            preferences.removeObject(forKey: "session")
+            
+            LoginToDo()
+        }
+        else{
+            login_now(username:usernameTextField.text!, password: passwordTextField.text!)
+        }
+
+    }
     var login_session:String = ""
     
     override func viewDidLoad() {
@@ -39,21 +53,6 @@ class LoginViewController: UIViewController {
         {
             LoginToDo()
         }
-    }
-    
-    @IBAction func DoLogin(_ sender: AnyObject) {
-        
-        if(loginButton.titleLabel?.text == "Logout")
-        {
-            let preferences = UserDefaults.standard
-            preferences.removeObject(forKey: "session")
-            
-            LoginToDo()
-        }
-        else{
-            login_now(username:usernameTextField.text!, password: passwordTextField.text!)
-        }
-        
     }
     
     
