@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EAn-nz-Zos">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="arc-vC-zJ6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG4-oL-4YQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97" y="-467"/>
+            <point key="canvasLocation" x="1529" y="-1261"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="U56-pu-fWm">
@@ -190,6 +190,9 @@
                                             <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="rMA-Qa-Dfn" kind="show" id="Tup-Re-7ff"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpE-ed-7RH">
                                         <rect key="frame" x="75" y="259" width="121" height="33"/>
@@ -202,6 +205,9 @@
                                             <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="KVE-cM-mVc" kind="show" id="q7C-bg-FvR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -261,6 +267,7 @@
                             <constraint firstItem="8ed-Ye-BFH" firstAttribute="centerY" secondItem="gq4-fc-8qN" secondAttribute="centerY" id="zUf-ov-M8f"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Jvf-ff-rcD"/>
                     <connections>
                         <outlet property="loginButton" destination="EGv-H4-2DO" id="pNJ-GS-OUf"/>
                         <outlet property="passwordTextField" destination="sr2-Qf-iN0" id="3SW-2L-wua"/>
@@ -269,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtc-BG-LEV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="-467"/>
+            <point key="canvasLocation" x="1528.8" y="-467.3163418290855"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="3lb-wD-rbh">
@@ -387,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNV-FU-MXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293" y="-467"/>
+            <point key="canvasLocation" x="2458" y="-467"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -458,7 +465,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="245"/>
+            <point key="canvasLocation" x="1529" y="224"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SnS-mF-Zq8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="arc-vC-zJ6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g6T-ab-21f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EAn-nz-Zos" kind="relationship" relationship="rootViewController" id="1W6-Yh-pDV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztG-Nn-HbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589.60000000000002" y="-467.3163418290855"/>
         </scene>
     </scenes>
     <resources>
